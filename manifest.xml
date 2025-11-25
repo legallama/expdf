@@ -1,129 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OfficeApp
-  xmlns="http://schemas.microsoft.com/office/appforoffice/1.5"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-  xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
-  xsi:type="MailApp">
-
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xsi:type="MailAddinType">
   <Id>12345678-1234-1234-1234-123456789012</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Email to PDF Exporter</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-
   <DisplayName DefaultValue="Email to PDF Exporter"/>
-  <Description DefaultValue="Export Outlook emails to PDF — single email or an entire conversation chain."/>
-
-  <!-- HOST -->
+  <Description DefaultValue="Export Outlook emails to PDF"/>
+  
   <Hosts>
     <Host Name="Mailbox"/>
   </Hosts>
-
-  <!-- PERMISSIONS -->
+  
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
+  </DefaultSettings>
+  
   <Permissions>ReadWriteItem</Permissions>
-
-  <!-- RESOURCES -->
-  <Resources>
-    <bt:Images>
-      <bt:Image id="icon16" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/assets/icon16.png"/>
-      <bt:Image id="icon32" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/assets/icon32.png"/>
-      <bt:Image id="icon80" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/assets/icon80.png"/>
-    </bt:Images>
-
-    <bt:Urls>
-      <!-- Must be JS -->
-      <bt:Url id="functionFile" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.js"/>
-      <bt:Url id="taskPaneUrl" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
-    </bt:Urls>
-
-    <bt:ShortStrings>
-      <bt:String id="groupLabel" DefaultValue="Export"/>
-      <bt:String id="paneButtonLabel" DefaultValue="Export to PDF"/>
-      <bt:String id="paneButtonTooltip" DefaultValue="Export this email to PDF"/>
-    </bt:ShortStrings>
-
-    <bt:LongStrings>
-      <bt:String id="taskTitle" DefaultValue="Email to PDF Exporter"/>
-    </bt:LongStrings>
-  </Resources>
-
-  <!-- CROSS-PLATFORM COMMAND MODEL -->
-  <VersionOverrides
-    xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
-    xsi:type="VersionOverridesV1_0"
-    MinVersion="1.5">
-
-    <Hosts>
-
-      <Host xsi:type="MailHost">
-
-        <!-- WINDOWS + MAC + NEW OUTLOOK -->
-        <DesktopFormFactor>
-
-          <FunctionFile resid="functionFile"/>
-
-          <ExtensionPoint xsi:type="MessageReadCommandSurface">
-
-            <OfficeTab id="TabDefault">
-              <Group id="msgReadGroup">
-                <Label resid="groupLabel"/>
-
-                <Control xsi:type="Button" id="openPaneButton">
-                  <Label resid="paneButtonLabel"/>
-
-                  <Supertip>
-                    <Title resid="paneButtonLabel"/>
-                    <Description resid="paneButtonTooltip"/>
-                  </Supertip>
-
-                  <Icon>
-                    <bt:Image size="16" resid="icon16"/>
-                    <bt:Image size="32" resid="icon32"/>
-                    <bt:Image size="80" resid="icon80"/>
-                  </Icon>
-
-                  <Action xsi:type="ShowTaskpane">
-                    <SourceLocation resid="taskPaneUrl"/>
-                  </Action>
-                </Control>
-
-              </Group>
-            </OfficeTab>
-
-          </ExtensionPoint>
-
-        </DesktopFormFactor>
-
-
-        <!-- OUTLOOK WEB + MOBILE COMPATIBILITY -->
-        <MobileFormFactor>
-
-          <ExtensionPoint xsi:type="MessageReadCommandSurface">
-
-            <Group id="msgReadGroupMobile">
-              <Label resid="groupLabel"/>
-
-              <Control xsi:type="Button" id="openPaneButtonMobile">
-                <Label resid="paneButtonLabel"/>
-
-                <Icon>
-                  <bt:Image size="16" resid="icon16"/>
-                </Icon>
-
-                <Action xsi:type="ShowTaskpane">
-                  <SourceLocation resid="taskPaneUrl"/>
-                </Action>
-              </Control>
-            </Group>
-
-          </ExtensionPoint>
-
-        </MobileFormFactor>
-
-      </Host>
-
-    </Hosts>
-
-  </VersionOverrides>
-
 </OfficeApp>
