@@ -3,7 +3,6 @@
   xmlns="http://schemas.microsoft.com/office/appforoffice/1.5"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-  xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
   xsi:type="MailApp">
 
   <Id>12345678-1234-1234-1234-123456789012</Id>
@@ -12,26 +11,22 @@
   <DefaultLocale>en-US</DefaultLocale>
 
   <DisplayName DefaultValue="Email to PDF Exporter"/>
-  <Description DefaultValue="Export Outlook emails to PDF — single email or conversation chain."/>
+  <Description DefaultValue="Export Outlook emails to PDF - single email or entire conversation chain"/>
 
-  <!-- Host -->
   <Hosts>
     <Host Name="Mailbox"/>
   </Hosts>
 
-  <Permissions>ReadWriteItem</Permissions>
-
-  <!-- RESOURCES -->
   <Resources>
     <bt:Images>
-      <bt:Image id="icon16" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/assets/icon16.png"/>
-      <bt:Image id="icon32" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/assets/icon32.png"/>
-      <bt:Image id="icon80" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/assets/icon80.png"/>
+      <bt:Image id="icon16" DefaultValue="https://via.placeholder.com/16"/>
+      <bt:Image id="icon32" DefaultValue="https://via.placeholder.com/32"/>
+      <bt:Image id="icon80" DefaultValue="https://via.placeholder.com/80"/>
     </bt:Images>
 
     <bt:Urls>
-      <bt:Url id="functionFile" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.js"/>
-      <bt:Url id="taskPaneUrl" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
+      <bt:Url id="functionfile" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
+      <bt:Url id="taskpaneUrl" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
     </bt:Urls>
 
     <bt:ShortStrings>
@@ -45,71 +40,46 @@
     </bt:LongStrings>
   </Resources>
 
-  <!-- PLATFORM OVERRIDES (Mac, Web, New Outlook, Win) -->
   <VersionOverrides
     xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
     xsi:type="VersionOverridesV1_0"
-    Name="Email to PDF Exporter"
     MinVersion="1.5">
 
     <Hosts>
       <Host xsi:type="MailHost">
 
-        <!-- DESKTOP (Windows + Mac + New Outlook) -->
         <DesktopFormFactor>
-          <FunctionFile resid="functionFile"/>
+          <FunctionFile resid="functionfile"/>
 
           <ExtensionPoint xsi:type="MessageReadCommandSurface">
             <OfficeTab id="TabDefault">
               <Group id="msgReadGroup">
                 <Label resid="groupLabel"/>
 
-                <Control xsi:type="Button" id="openPaneButton">
+                <Control xsi:type="Button" id="msgReadOpenPaneButton">
                   <Label resid="paneButtonLabel"/>
+
                   <Supertip>
                     <Title resid="paneButtonLabel"/>
                     <Description resid="paneButtonTooltip"/>
                   </Supertip>
 
                   <Icon>
-                    <bt:Image size="16" resid="icon16"/>
-                    <bt:Image size="32" resid="icon32"/>
-                    <bt:Image size="80" resid="icon80"/>
+                    <bt:Image resid="icon16" size="16"/>
+                    <bt:Image resid="icon32" size="32"/>
+                    <bt:Image resid="icon80" size="80"/>
                   </Icon>
 
                   <Action xsi:type="ShowTaskpane">
-                    <SourceLocation resid="taskPaneUrl"/>
+                    <SourceLocation resid="taskpaneUrl"/>
                   </Action>
+
                 </Control>
 
               </Group>
             </OfficeTab>
           </ExtensionPoint>
         </DesktopFormFactor>
-
-        <!-- WEB + MOBILE (OWA, New Outlook Web, Mobile Browser) -->
-        <MobileFormFactor>
-          <ExtensionPoint xsi:type="MessageReadCommandSurface">
-
-            <Group id="msgReadGroupMobile">
-              <Label resid="groupLabel"/>
-
-              <Control xsi:type="Button" id="openPaneButtonMobile">
-                <Label resid="paneButtonLabel"/>
-
-                <Icon>
-                  <bt:Image size="16" resid="icon16"/>
-                </Icon>
-
-                <Action xsi:type="ShowTaskpane">
-                  <SourceLocation resid="taskPaneUrl"/>
-                </Action>
-              </Control>
-
-            </Group>
-
-          </ExtensionPoint>
-        </MobileFormFactor>
 
       </Host>
     </Hosts>
