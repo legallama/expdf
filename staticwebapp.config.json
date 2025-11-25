@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "route": "/*",
+      "serve": "/taskpane.html",
+      "statusCode": 200
+    }
+  ]
+}
