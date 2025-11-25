@@ -8,7 +8,7 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Email to PDF Exporter"/>
   <Description DefaultValue="Export Outlook emails to PDF - single email or entire conversation chain"/>
-  <Hosts>
+  <Hosts> 
     <Host xsi:type="MailHost">
       <DesktopFormFactor>
         <FunctionFile resid="functionfile"/>
