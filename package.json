@@ -1,0 +1,30 @@
+{
+  "name": "email-to-pdf-exporter",
+  "version": "1.0.0",
+  "description": "Outlook add-in to export emails to PDF",
+  "main": "taskpane.js",
+  "scripts": {
+    "start": "office-addin-debugging start manifest.xml",
+    "stop": "office-addin-debugging stop manifest.xml",
+    "build": "echo 'Build complete'",
+    "package": "echo 'Package complete'"
+  },
+  "keywords": [
+    "outlook",
+    "add-in",
+    "pdf",
+    "export"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/office-js": "^1.0.0",
+    "office-addin-cli": "^1.4.0",
+    "office-addin-debugging": "^5.0.0",
+    "office-addin-manifest": "^1.12.0",
+    "office-js": "^1.1.0"
+  },
+  "dependencies": {
+    "html2pdf.js": "^0.10.1"
+  }
+}
