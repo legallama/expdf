@@ -39,7 +39,7 @@
       <bt:Image id="icon80" DefaultValue="https://via.placeholder.com/80"/>
     </bt:Images>
     <bt:Urls>
-      <bt:Url id="functionfile" DefaultValue="https://red-bay-0c7685e0f.3.azurestaticapps.net/taskpane.js"/>
+      <bt:Url id="functionfile" DefaultValue="https://red-bay-0c7685e0f.3.azurestaticapps.net/taskpane.html"/>
       <bt:Url id="taskpaneUrl" DefaultValue="https://red-bay-0c7685e0f.3.azurestaticapps.net/taskpane.html"/>
     </bt:Urls>
     <bt:ShortStrings>
