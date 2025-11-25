@@ -1,6 +1,14 @@
 {
   "routes": [
     {
+      "route": "/taskpane.html",
+      "serve": "/taskpane.html"
+    },
+    {
+      "route": "/manifest.xml",
+      "serve": "/manifest.xml"
+    },
+    {
       "route": "/*",
       "serve": "/taskpane.html",
       "statusCode": 200
