@@ -1,3 +1,4 @@
 node_modules/
 .DS_Store
 *.log
+manifest1.xml
