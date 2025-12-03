@@ -64,9 +64,9 @@
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Export"/>
         <bt:String id="paneButtonLabel" DefaultValue="Export to PDF"/>
-      </bt:ShortStrings>
+      </bt:ShortStrings> 
       <bt:LongStrings>
-        <bt:String id="paneButtonTooltip" DefaultValue="Export this email to PDF"/>
+        <bt:String id="paneButtonTooltip" DefaultValue="Export this email to PDF."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
