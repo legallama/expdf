@@ -3,10 +3,13 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
-           xsi:type="MailApp">
+           xsi:type="TaskPaneApp">
 
-  <Id>12345678-1234-1234-1234-123456789012</Id>
-  <Version>1.0.0.0</Version>
+           
+           
+
+  
+  <Id>a4e643c5-4a12-4291-955e-da75a314f118</Id>  <Version>1.0.0.0</Version>
   <ProviderName>Email to PDF Exporter</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Email to PDF Exporter"/>
@@ -36,6 +39,7 @@
       </DesktopFormFactor>
     </Host>
   </Hosts>
+  
   <Resources>
     <bt:Images>
       <bt:Image id="icon16" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/pdf_hero.png"/>
