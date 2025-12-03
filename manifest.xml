@@ -8,7 +8,7 @@
   <Description DefaultValue="Export Outlook emails to PDF - single email or entire conversation chain"/>
   <IconUrl DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
   <HighResolutionIconUrl DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net"/>
   <AppDomains>
     <AppDomain>jolly-bush-03df0f61e.3.azurestaticapps.net</AppDomain>
   </AppDomains>

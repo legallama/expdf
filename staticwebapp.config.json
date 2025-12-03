@@ -5,6 +5,10 @@
       "serve": "/taskpane.html"
     },
     {
+      "route": "/functions.html",
+      "serve": "/functions.html"
+    },
+    {
       "route": "/manifest.xml",
       "serve": "/manifest.xml"
     },
@@ -13,5 +17,11 @@
       "serve": "/taskpane.html",
       "statusCode": 200
     }
-  ]
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/taskpane.html",
+      "statusCode": 200
+    }
+  }
 }
