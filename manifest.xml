@@ -9,7 +9,7 @@
   <DisplayName DefaultValue="Email to PDF Exporter"/>
   <Description DefaultValue="Export Outlook emails to PDF - single email or entire conversation chain"/>
 
-  <IconUrl DefaultValue="https://jolly-bush-03df0f61e. 3.azurestaticapps.net/bttn.png" />
+  <IconUrl DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png" />
   <HighResolutionIconUrl DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png" />
 
   <Hosts>
@@ -69,12 +69,12 @@
     <Resources>
       <bt:Images>
         <bt:Image id="icon16" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
-        <bt:Image id="icon32" DefaultValue="https://jolly-bush-03df0f61e.3. azurestaticapps.net/bttn.png"/>
+        <bt:Image id="icon32" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
         <bt:Image id="icon80" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="functionfile" DefaultValue="https://jolly-bush-03df0f61e.3. azurestaticapps.net/taskpane.js"/>
-        <bt:Url id="taskpaneUrl" DefaultValue="https://jolly-bush-03df0f61e.3. azurestaticapps.net/taskpane.html"/>
+        <bt:Url id="functionfile" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.js"/>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Export"/>
