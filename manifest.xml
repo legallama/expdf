@@ -2,21 +2,14 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
            xsi:type="MailApp">
-  
   <Id>a4e643c5-4a12-4291-955e-da75a314f118</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Email to PDF Exporter</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Email to PDF Exporter"/>
-  <Description DefaultValue="Export Outlook emails to PDF"/>
-  
-  <Requirements>
-    <bt:Sets DefaultMinVersion="1.1">
-      <bt:Set Name="Mailbox"/>
-    </bt:Sets>
-  </Requirements>
-  
+  <Description DefaultValue="Export Outlook emails to PDF - single email or entire conversation chain"/>
   <Hosts>
     <Host xsi:type="MailHost">
       <DesktopFormFactor>
@@ -41,7 +34,6 @@
       </DesktopFormFactor>
     </Host>
   </Hosts>
-  
   <Resources>
     <bt:Images>
       <bt:Image id="icon16" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
@@ -49,7 +41,7 @@
       <bt:Image id="icon80" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
     </bt:Images>
     <bt:Urls>
-      <bt:Url id="functionfile" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
+      <bt:Url id="functionfile" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.js"/>
       <bt:Url id="taskpaneUrl" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
     </bt:Urls>
     <bt:ShortStrings>
@@ -57,5 +49,8 @@
       <bt:String id="paneButtonLabel" DefaultValue="Export to PDF"/>
       <bt:String id="paneButtonTooltip" DefaultValue="Export this email to PDF"/>
     </bt:ShortStrings>
+    <bt:LongStrings>
+      <bt:String id="taskTitle" DefaultValue="Email to PDF Exporter"/>
+    </bt:LongStrings>
   </Resources>
 </OfficeApp>
