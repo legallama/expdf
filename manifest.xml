@@ -11,6 +11,8 @@
   <DisplayName DefaultValue="Email to PDF Exporter"/>
   <Description DefaultValue="Export Outlook emails to PDF - single email or entire conversation chain"/>
   
+  <IconUrl DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png" />
+  
   <DefaultSettings>
     <SourceLocation DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
   </DefaultSettings>
