@@ -16,7 +16,7 @@
   <Hosts>
     <Host Name="Mailbox" />
   </Hosts>
-
+ 
   <Permissions>ReadWriteItem</Permissions>
 
   <Rule xsi:type="RuleCollection" Mode="Or">
@@ -83,4 +83,5 @@
     </Resources>
   </VersionOverrides>
   <SupportUrl DefaultValue="https://your-support-url.example.com"/>
+
 </OfficeApp>
