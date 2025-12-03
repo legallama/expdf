@@ -15,56 +15,55 @@
   <DisplayName DefaultValue="Email to PDF Exporter"/>
   <Description DefaultValue="Export Outlook emails to PDF - single email or entire conversation chain"/>
 
-  <Hosts>
-    <Host xsi:type="MailHost">
-      <DesktopFormFactor>
-        <ExtensionPoint xsi:type="MessageReadCommandSurface">
-          <OfficeTab id="TabDefault">
-            <Group id="msgReadGroup">
-              <Label resid="groupLabel"/>
-              <Control xsi:type="Button" id="msgReadOpenPaneButton">
-                <Label resid="paneButtonLabel"/>
-                <Supertip>
-                  <Title resid="paneButtonLabel"/>
-                  <Description resid="paneButtonTooltip"/>
-                </Supertip>
-                <Icon>
-                  <bt:Image size="16" resid="icon16"/>
-                  <bt:Image size="32" resid="icon32"/>
-                  <bt:Image size="80" resid="icon80"/>
-                </Icon>
-                <Action xsi:type="ShowTaskpane">
-                  <SourceLocation resid="taskpaneUrl"/>
-                  <Title resid="taskTitle"/>
-                </Action>
-              </Control>
-            </Group>
-          </OfficeTab>
-        </ExtensionPoint>
-      </DesktopFormFactor>
-    </Host>
-  </Hosts>
-  
   <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
   </Rule>
 
-  <Resources>
-    <bt:Images>
-      <bt:Image id="icon16" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
-      <bt:Image id="icon32" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
-      <bt:Image id="icon80" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
-    </bt:Images>
-    <bt:Urls>
-      <bt:Url id="taskpaneUrl" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
-    </bt:Urls>
-    <bt:ShortStrings>
-      <bt:String id="groupLabel" DefaultValue="Export"/>
-      <bt:String id="paneButtonLabel" DefaultValue="Export to PDF"/>
-      <bt:String id="paneButtonTooltip" DefaultValue="Export this email to PDF"/>
-    </bt:ShortStrings>
-    <bt:LongStrings>
-      <bt:String id="taskTitle" DefaultValue="Email to PDF Exporter"/>
-    </bt:LongStrings>
-  </Resources>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <DesktopFormFactor>
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="msgReadGroup">
+                <Label resid="groupLabel"/>
+                <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                  <Label resid="paneButtonLabel"/>
+                  <Supertip>
+                    <Title resid="paneButtonLabel"/>
+                    <Description resid="paneButtonTooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="taskpaneUrl"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
+        <bt:Image id="icon32" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
+        <bt:Image id="icon80" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="groupLabel" DefaultValue="Export"/>
+        <bt:String id="paneButtonLabel" DefaultValue="Export to PDF"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="paneButtonTooltip" DefaultValue="Export this email to PDF"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
 </OfficeApp>
