@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:type="MailApp">
+<OfficeApp
+    xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:type="MailApp">
   <Id>a4e643c5-4a12-4291-955e-da75a314f118</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Email to PDF Exporter</ProviderName>
@@ -16,21 +17,16 @@
     <Host Name="Mailbox" />
   </Hosts>
 
-  <Requirements>
-    <Sets>
-      <Set Name="Mailbox" MinVersion="1.1" />
-    </Sets>
-  </Requirements>
-
   <Permissions>ReadWriteItem</Permissions>
 
   <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
   </Rule>
 
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
-                   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-                   xsi:type="VersionOverridesV1_0">
+  <VersionOverrides
+    xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+    xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+    xsi:type="VersionOverridesV1_0">
     <Requirements>
       <bt:Sets DefaultMinVersion="1.3">
         <bt:Set Name="Mailbox" />
@@ -86,4 +82,5 @@
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
+  <SupportUrl DefaultValue="https://your-support-url.example.com"/>
 </OfficeApp>
