@@ -52,6 +52,11 @@
                     <Title resid="paneButtonLabel"/>
                     <Description resid="paneButtonTooltip"/>
                   </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
                   <Action xsi:type="ShowTaskpane">
                     <SourceLocation resid="taskpaneUrl"/>
                   </Action>
@@ -69,7 +74,7 @@
         <bt:Image id="icon80" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="functionfile" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.js"/>
+        <bt:Url id="functionfile" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/functions.html"/>
         <bt:Url id="taskpaneUrl" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
