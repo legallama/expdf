@@ -13,9 +13,11 @@
   
   <IconUrl DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png" />
   
-  <DefaultSettings>
-    <SourceLocation DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
-  </DefaultSettings>
+  <HighResolutionIconUrl DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png" />
+  
+  <SupportUrl DefaultValue="https://www.linkedin.com/in/montgomerykern" />
+  
+  <Hosts />
   
   <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
