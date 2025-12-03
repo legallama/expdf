@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OfficeApp
-    xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:type="MailApp">
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="MailApp">
   <Id>a4e643c5-4a12-4291-955e-da75a314f118</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Email to PDF Exporter</ProviderName>
@@ -10,6 +9,7 @@
   <DisplayName DefaultValue="Email to PDF Exporter"/>
   <Description DefaultValue="Export Outlook emails to PDF - single email or entire conversation chain"/>
 
+  <SourceLocation DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
   <IconUrl DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png" />
   <HighResolutionIconUrl DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png" />
 
