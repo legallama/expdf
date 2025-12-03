@@ -2,7 +2,7 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-           xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.1"
+           xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
            xsi:type="MailApp">
 
   <Id>a4e643c5-4a12-4291-955e-da75a314f118</Id>
@@ -26,11 +26,6 @@
                   <Title resid="paneButtonLabel"/>
                   <Description resid="paneButtonTooltip"/>
                 </Supertip>
-                <Icon>
-                  <bt:Image size="16" resid="icon16"/>
-                  <bt:Image size="32" resid="icon32"/>
-                  <bt:Image size="80" resid="icon80"/>
-                </Icon>
                 <Action xsi:type="ShowTaskpane">
                   <SourceLocation resid="taskpaneUrl"/>
                 </Action>
@@ -41,7 +36,6 @@
       </DesktopFormFactor>
     </Host>
   </Hosts>
-
   <Resources>
     <bt:Images>
       <bt:Image id="icon16" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/bttn.png"/>
@@ -57,5 +51,8 @@
       <bt:String id="paneButtonLabel" DefaultValue="Export to PDF"/>
       <bt:String id="paneButtonTooltip" DefaultValue="Export this email to PDF"/>
     </bt:ShortStrings>
+    <bt:LongStrings>
+      <bt:String id="taskTitle" DefaultValue="Email to PDF Exporter"/>
+    </bt:LongStrings>
   </Resources>
 </OfficeApp>
