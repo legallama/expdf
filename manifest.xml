@@ -8,8 +8,8 @@
            
            
 
-  
-  <Id>a4e643c5-4a12-4291-955e-da75a314f118</Id>  <Version>1.0.0.0</Version>
+  <Id>a4e643c5-4a12-4291-955e-da75a314f118</Id>
+  <Version>1.0.0.0</Version>
   <ProviderName>Email to PDF Exporter</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Email to PDF Exporter"/>
@@ -18,7 +18,6 @@
   <Hosts>
     <Host xsi:type="MailHost">
       <DesktopFormFactor>
-        <FunctionFile resid="functionfile"/>
         <ExtensionPoint xsi:type="MessageReadCommandSurface">
           <OfficeTab id="TabDefault">
             <Group id="msgReadGroup">
@@ -31,6 +30,7 @@
                 </Supertip>
                 <Action xsi:type="ShowTaskpane">
                   <SourceLocation resid="taskpaneUrl"/>
+                  <Title resid="taskTitle"/>
                 </Action>
               </Control>
             </Group>
@@ -40,6 +40,10 @@
     </Host>
   </Hosts>
   
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
+  </Rule>
+
   <Resources>
     <bt:Images>
       <bt:Image id="icon16" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/pdf_hero.png"/>
@@ -47,7 +51,6 @@
       <bt:Image id="icon80" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/pdf_hero.png"/>
     </bt:Images>
     <bt:Urls>
-      <bt:Url id="functionfile" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
       <bt:Url id="taskpaneUrl" DefaultValue="https://jolly-bush-03df0f61e.3.azurestaticapps.net/taskpane.html"/>
     </bt:Urls>
     <bt:ShortStrings>
